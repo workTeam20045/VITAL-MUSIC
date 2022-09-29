@@ -1,0 +1,916 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: cursive;
+}
+body{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: #def2ff;
+}
+
+header{
+	width: 100%;
+	height: 13%;
+	background: #def2ff;
+	color: rgb(0, 0, 0);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+header a{
+	text-decoration: none;
+}
+
+.headerTitle{
+	width: 30%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerTitle a{
+	text-decoration: none;
+}
+
+.switch{
+	background-color: #a1baca;
+	border-radius: 100px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	position: relative;
+	outline: none;
+}
+
+.switch span{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	background: none;
+	color: #fff;
+}
+
+.switch::after{
+	content: "";
+	width: 30px;
+	height: 30px;
+	display: block;
+	position: absolute;
+	background: #f1f1f1;
+	top: 0;
+	left: 0;
+	right: unset;
+	border-radius: 100px;
+	transition: .3s ease all;
+	box-shadow: 0px 0px 2px 2px  rgba(0,0,0,0.2);
+}
+
+.switch.active{
+	background-color: #5f59ab;
+	color: #000000;
+}
+
+.switch.active::after{
+	right: 0;
+	left: unset;
+}
+
+.dark{
+	background-color: #242130;
+	color: white;
+	transition: 1s linear;
+}
+
+.dark a{
+	color: white;
+}
+
+.dark .icons{
+	color: white;
+}
+
+.dark .showSongs{
+	background-color: #242130;
+}
+
+.imgHeader {
+	width: 60px;
+	height: 60px;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.contac{
+	width: 200px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background: #def2ff;
+	justify-content: space-evenly;
+	margin-left: 3rem;
+}
+
+.dark .contac{
+	background-color: #242130;
+}
+
+.contac a {
+	color: #000000;
+	font-size: 2rem;
+}
+
+.allScreen{
+	width: 100%;
+	height: 67%;
+	display: flex;
+}
+.icon-vynil{
+	font-size: 2.8rem;
+	color: rgb(0, 0, 0)
+}
+.icon-headset-sound-streamline{
+	font-size: 2.8rem;
+	color: rgb(0, 0, 0)
+}
+
+
+.allScreen{
+	width: 100%;
+	height: 67%;
+	display: flex;
+}
+
+.listSongs{
+	width: 28%;
+	height: 98%;
+}
+
+.listSongs h2{
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.showSongs{
+	width: 100%;
+	height: 87.8%;
+	overflow: hidden;
+	background: #def2ff;
+
+}
+
+.showSongs:hover{
+	overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background: linear-gradient(transparent, #5f59ab);
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: linear-gradient(transparent, #979fa1 , rgb(241, 238, 238));
+}
+
+.oneSong{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding-top: 0.5rem;
+	margin-left: 0.8rem;
+}
+
+.dark .oneSong .btnDelete{
+	color: white;
+	border: 2px solid white;
+}
+
+.oneImage{
+	width: 35px;
+	height: 35px;
+	margin-left: 0.2rem;
+}
+
+.oneSongTitle {
+	width: 200px;
+	height: 30px;
+	margin-left: 0.5rem;
+	color: rgb(0, 0, 0);
+    text-decoration: none;
+	font-weight: bold;
+}
+
+.oneSongP {
+	width: 20px;
+	height: 20px;
+}
+
+.oneArtist{
+	font-size:13px;
+	font-weight: normal; 
+}
+
+.btnDelete{
+	width: 30px;
+	height: 30px ;
+	border-radius: 50%;
+	background: none;
+	margin-left: 1rem;
+	color: #5f59ab;
+	border: 2px solid #5f59ab;
+	font-weight: 900;
+}
+
+.btnDelete:hover{
+	background: #5f59ab;
+	color: #def2ff;
+	border: 1px solid #5f59ab;
+}
+
+.main{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main button{
+	padding: 10px 12px;
+	margin: 0 10px;
+}
+
+.main #logo{
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	font-size: 25px;
+	color: #ccc;
+	text-transform: capitalize;
+}
+
+.main #logo i{
+	margin-right: 15px;
+}
+
+/* left & right part */
+.left{
+	width: 30%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dark .left img{
+	box-shadow: 
+	5px 5px 15px rgba(194, 194, 194, 0.224),
+	-5px -5px 15px rgba(243, 243, 243, 0.245);
+}
+
+/* song image */
+.left img{
+	height: 90px;
+	width: 90px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow:
+	5px 5px 15px rgba(0,0,0,0.3),
+	-5px -5px 15px rgba(255,255,255,0.1);
+	padding: 5px;
+}
+
+.song_detail{
+	position: relative;
+	width: 50%;
+	overflow: hidden;
+	margin-left: 2rem;
+	margin-top: 1rem;
+	padding-left: 25px;
+}
+
+.dark .song_detail #title{
+	color: white;
+}
+
+.dark .song_detail #artist{
+	color: white;
+}
+
+.song_detail #title{
+	text-transform: capitalize;
+	color: rgb(0, 0, 0);
+	font-size: 27px;
+}
+
+.song_detail #artist{
+	text-transform: capitalize;
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+/* right part */
+.right{
+	width: 60%;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	justify-content: center;
+}
+
+/* both range slider part */
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 50%;
+	outline: none;
+    height: 2px;
+    margin: 0 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	height: 20px;
+	width: 20px;
+    border-radius: 50%;
+	background: #5f59ab;
+	cursor: pointer;
+}
+
+.right input[type=range]{
+	width: 40%;
+}
+
+/* volume part */
+.right .volume{
+	width: 40%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+}
+
+.dark .right .volume{
+	color: white;
+}
+
+.volume input[type="range"] {
+	flex: 1;
+	background: #000000;
+}
+
+.dark input[type="range"] {
+	background: white;
+}
+
+.right .volume p{
+	width: 20px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.right .volume i{
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 8px 12px;
+	font-size: 20px;
+}
+
+.right .volume i:hover{
+	background: #5f59ab;
+}
+
+.volume #volume_show{
+	padding: 8px 12px;
+	margin: 0 5px 0 0;
+	background: rgba(245,245,245,0.1);
+}
+
+.right .progress-container{
+	width: 70%;
+    margin-top: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.progress-container input[type="range"] {
+	flex: 1;
+	background: #000000;
+}
+
+.dark .progress-container input[type="range"] {
+background: white;
+}
+
+.right #auto{
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	padding: 5px 7px;
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+	outline: none;
+	border-radius: 10px;
+	box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2),
+	inset -2px -2px 5px rgba(255,255,255,0.1),
+	5px 5px 15px rgba(0,0,0,0.3),
+	-5px -5px 15px rgba(255,255,255,0.1);
+}
+
+.right button{
+	width: 65px;
+    height: 65px;
+    background: rgb(144, 144, 144);
+    border: none;
+    border-radius: 50%;
+	outline: none;
+}
+
+.controls{
+	width: 50%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.middle{
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5px ;
+	gap: 3rem;
+}
+
+.right i{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	color: #0c0c0c;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.dark .right i{
+	color: white;
+}
+
+.show_song_no{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 12px;
+	color: rgb(0, 0, 0);
+	border-radius: 5px;
+	background: rgba(255,255,255,0.2);
+	box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2),
+	inset -2px -2px 5px rgba(255,255,255,0.1),
+	5px 5px 15px rgba(0,0,0,0.3),
+	-5px -5px 15px rgba(255,255,255,0.1);
+}
+.show_song_no p:nth-child(2){
+	margin: 0 5px;
+}
+
+/* ventana modal */
+#btnModal{
+	width: 7rem;
+	height: 99%;
+	background: transparent;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: 1s linear;
+	font-weight: bold;
+}
+
+#btnModal:hover{
+	background: #5f59ab;
+}
+
+.modal {
+    width: 50%;
+    height: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+	flex-wrap: wrap;
+    position: fixed;
+    z-index: 1;
+    display: none;
+    background-image: linear-gradient(to bottom, #a1baca, rgb(243, 243, 243));
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+    animation: show 1s;
+	margin-left: 20rem;
+	margin-top: 2rem;
+}
+
+.modal h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.img-modal{
+	width: 40px;
+	height: 40px;
+}
+
+.input-field{
+	width: 320px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.input-field label{
+	font-size: 18px;
+}
+
+
+.input-field > input {
+    width: 10.5rem;
+    height: 2rem;
+    font-size: 18px;
+    border: 1px solid #5f59ab;
+    border-radius: 4px;
+    margin: 4px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .5s linear;
+}
+
+.input-field > input:focus {
+    border-color: #5f59ab;
+    box-shadow:0 0 8px 0 #5f59ab;
+} 
+
+.input-field input[type="file"] {
+    width: 10.5rem;
+    height: 2.5rem;
+    border-radius: 5px;  
+    color: rgb(0, 0, 0);
+    font-size: 1rem;  
+}
+
+.modal > button {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1.5px solid #5f59ab;
+    background-color: #5f59ab;
+    color: white;
+    font-size: 1.5rem;  
+    cursor: pointer;  
+}
+
+.modal > button:hover,
+.modal > button:focus {
+	background: white;
+    color: #5f59ab;
+    border: 1px solid #5f59ab;
+}
+
+#close-modal {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    background: #5f59ab;
+    border: 1px solid #5f59ab;
+    color: white;
+    transition: 2s ease all;
+    position: absolute;
+    top: 1rem;
+    right: 0.3rem;
+    text-decoration: none;
+    animation: show 1s;
+}
+
+#close-modal:hover{
+    background: white;
+    color: #5f59ab;
+    border: 1px solid #5f59ab;
+}
+
+.activate{
+    visibility: visible;
+}
+
+/* Creacion Promo Cards */
+
+/* Modal promo */
+
+#btnPromo{
+	width: 7rem;
+	height: 99%;
+	background: transparent;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: 1s linear;
+	font-weight: bold;	
+}
+
+#btnPromo:hover{
+	background: #5f59ab;
+}
+
+.modalPromo{
+	width: 50%;
+	height: 78%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	z-index: 1;
+	display: none;
+	margin-top: 2rem;
+	background-image: linear-gradient(to bottom, #a1baca, rgb(243, 243, 243));
+	box-shadow: 15px 10px 5px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 2%;
+	margin-left: 22rem;
+	animation: show 1s;
+	color: white;
+	animation: show 1s;
+}
+
+.modalPromo h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 1rem;
+}
+
+@keyframes show {
+	0%{
+		transform: translateY(150vh);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+#closePromo{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    background: #5f59ab;
+    border: 1px solid #5f59ab;
+    color: rgb(255, 255, 255);
+    transition: 2s ease all;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.3rem;
+    text-decoration: none;
+    animation: show 1s;
+}
+
+#closePromo:hover{
+	background: white;
+    color: #5f59ab;
+    border: 1px solid #5f59ab;
+	transform: rotate(180deg);
+}
+
+form{
+	width: 80%;
+	height: auto;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form > input {
+	width: 17rem;
+    height: 2rem;
+    padding: 15px 15px 50px 50px;
+    font-size: 16px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+	margin: 1rem;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .5s linear;
+    font-size: 1.5rem;
+	text-align: center;
+}
+
+form > input:focus {
+	border-color: #5f59ab;
+    box-shadow:0 0 8px 0 #5f59ab;
+}
+
+form input[type="file"] {
+	width: 17rem;
+    height: 3rem;
+    border-radius: 5px;  
+    color: #5f59ab;
+    font-size: 1rem;  
+    padding-top: 10px;
+	margin-top: 3rem;
+}
+
+form > button {
+	width: 12rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1.5px solid #5f59ab;
+    background-color: #5f59ab;
+    color: #ffffff;
+    font-size: 1.5rem;  
+	margin-top: 1rem;
+    cursor: pointer;  
+    transition: 1s ease all;
+}
+
+form > button:hover,
+form > button:focus {
+	background-color: white;
+    color: #5f59ab;
+    border:  1.5px solid #5f59ab;
+}
+
+#allContainer{
+	width: 74%;
+	height: 100%;
+	display: flex;
+	background-color: #b9b9b9;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow-y: scroll;
+}
+
+.dark #allContainer{
+	background-color: #585858;
+}
+
+#h1Promos{
+	margin-top: 1.5rem;
+	color: #5f59ab;
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+.dark #h1Promos{
+	color: white;
+}
+
+.title{
+	text-transform: capitalize;
+	font-weight: bolder;
+}
+
+.dark .title{
+	color: white;
+}
+
+.container-promo{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 1.5rem;
+}
+
+.img-promo{
+	width: 320px;
+	height: 240px;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
+.promo-card{
+	width: 320px;
+	height: 360px;
+	color: #5f59ab;
+	margin-top: 2rem;
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 2px 2px 20px 2px #6e6e6e;
+	align-items: center;
+	text-align: center;
+	transition: 0.5s;
+    object-fit: cover;
+	border-radius: 10px;
+	background-color: #def2ff;
+}
+.dark .promo-card{
+	background-color: #000000;
+	box-shadow: 2px 2px 20px 2px #2b2b2b;
+}
+
+.promo-card:hover{
+	transform: scale(1.07);
+}
+
+/* Modal Confirm Delete */
+
+.modalDelete{
+	width: 50%;
+	height: 78%;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	z-index: 1;
+	margin-top: 2rem;
+	background-image: linear-gradient(to bottom, #a1baca, rgb(243, 243, 243));
+	box-shadow: 15px 10px 5px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 2%;
+	margin-left: 22rem;
+	animation: show 1s;
+	color: white;	
+	font-size: 1.7rem;
+	text-align: center;
+	justify-content: space-evenly;
+}
+
+.buttons{
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#cancel{
+	width: 12rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1.5px solid #000000;
+    background-color: #b7b7b7;
+    color: #ffffff;
+    font-size: 1.5rem;  
+	margin-top: 1rem;
+    cursor: pointer;  
+    transition: 1s ease all;
+}
+
+#cancel:hover{
+	background-color: white;
+    color: #000000;
+    border:  1.5px solid #000000;
+}
+
+#delete{
+	width: 12rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1.5px solid #5f59ab;
+    background-color: #5f59ab;
+    color: #ffffff;
+    font-size: 1.5rem;  
+	margin-top: 1rem;
+    cursor: pointer;  
+    transition: 1s ease all;
+}

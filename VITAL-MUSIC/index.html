@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="shortcut icon" href="img/play-button.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://file.myfontastic.com/eN2MJJ3Cvwjs6Ts4tWTMLN/icons.css" rel="stylesheet">
+</head> 
+
+<body>
+    <header id="header">
+        <div class="headerTitle">
+        <img src="img/play-button.png" class="imgHeader">
+        <a href="inicio.html"><h1>Vital Music</h1></a>
+        </div>
+        <button id="btnModal">Add Song</button>
+        <button id="btnPromo">Add Promo</button>
+        <div class="contac">
+            <a target="_blank"  class="icon-spotify icons" href="https://open.spotify.com/"></a>
+            <a target="_blank"  class="icon-youtube-alt icons" href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/playlists?view=50&sort=dd&shelf_id=10146040594312686804"></a>
+            <a target="_blank"  class="icon-soundcloud icons" href="https://soundcloud.com/"></a>  
+        </div>
+        <button class="switch" id="switch"> 
+            <span><i class="icon-sun-o"></i></span>
+            <span><i class="icon-moon-o"></i> </span> 
+        </button>
+    </header>
+
+    <!-- Añadir cancion -->
+    <div class="modal">
+        <h2>
+            <img src="img/agregar.png" class="img-modal">
+            Add Songs To Your Playlist
+        </h2>
+        <button id="close-modal">X</button>
+        
+        <div class="input-field">
+            <label for="">Name Of The Song</label>
+            <input type="text" id="new-name">
+        </div>  
+
+        <div class="input-field">
+            <label for="">Add The Song</label>
+            <input type="file" name="" id="new-song">
+        </div>
+        
+        <div class="input-field">
+            <label for="">Add The Image Of The Song</label>
+            <input type="file" name="" id="new-image">
+        </div> 
+        
+        <div class="input-field">
+            <label for="">Author Of The Song</label>
+            <input type="text" name="" id="new-sing">
+        </div>  
+        
+            <button type="reset" id="btnAdd">Agregar A La PlayList</button>
+    </div>
+
+    <!-- MODAL PROMO -->
+    <div class="modalPromo">
+        <h2>
+            <img src="img/reproductor-de-cd.png" class="img-modal">
+            Add To New Releases
+        </h2>
+        <button id="closePromo">X</button>
+        <form id="formPromo"action="">
+            <h2>Add Promo Tittle</h2>
+            <input type="text" id="titlePromo" placeholder="Tittle" >
+            <h2>Add Promo Image </h2>
+            <input type="file" name="" id="photoPromo">
+            <h2>Add Promo Author </h2>
+            <input type="text" id="AuthorName" placeholder="Author" >
+            <button id="addPromo">Add New Promo</button>
+        </form>
+    </div>
+
+    <!-- Modal confirm Delete -->
+    <div class="modalDelete">
+        <h3>¿Deseas Eliminar Esta Cancion De Tu Playlist?</h3>
+        <div class="buttons">
+            <button id="cancel">Cancelar</button>
+            <button id="delete">Eliminar</button>
+        </div>
+    </div>
+
+    <main class="allScreen">
+
+        <section class="listSongs">
+            <h2>Playlist</h2>
+            
+            <div class="showSongs" id="list">
+                <ul class="songs" id="songs">
+                    
+                </ul>
+            </div>
+        </section>
+
+        <section id="allContainer">
+            <h1 id="h1Promos">New Releases</h1>
+            <div class="container-promo">   
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main" >
+        <audio src="" id="audio"></audio>
+        <!--- left part --->
+        <div class="left">
+            <!--- song img --->
+            <img id="cover" src="img/default.jpg">
+            <div class="song_detail">
+                <p id="title">Name Song</p>
+                <p id="artist">Name Artist</p>
+            </div>
+        </div>
+
+        <!--- right part --->
+        <div class="right">
+            <!--- controles --->
+            <section class="controls">
+                <div class="middle">
+                    <i class="fas fa-step-backward" id="prev"></i>
+                    <i class="fa fa-play" id="play" ></i>
+                    <i class="fas fa-step-forward" id="next" ></i>
+                </div>
+                <!-- - duracion de la cancion --->
+                <div id="progress-container" class="progress-container">
+                    <input type="range" min="0" max="100" value="0" id="progress" >
+                </div>
+            </section>
+            <div class="volume">
+                <p id="volume_show">90</p>
+                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon"></i>
+                <input type="range" min="0" max="100" value="90"  id="volume">  
+            </div>
+        </div>
+    </footer>
+        
+        
+    </div>
+    <script type="module" src="js/app.js" defer></script>
+    <script type="module" src="js/firebase.js"></script>
+</body>
+</html>
